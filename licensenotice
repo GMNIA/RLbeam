@@ -1,0 +1,12 @@
+### License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+### Third-Party Software Notice: Sofistik
+
+This software relies on **SOFiSTiK**, which is a proprietary finite element software package. SOFiSTiK is not included in this project and must be obtained and licensed separately under the terms of SOFiSTiK AG's license agreement.
+
+#### Important Notes:
+- The use of this software does not grant any rights or permissions to use, copy, or distribute Sofistik.
+- Users must ensure compliance with Sofistik's licensing terms when using it in conjunction with this project.
+- For more information about Sofistik licensing, please visit: [https://www.sofistik.com](https://www.sofistik.com).
