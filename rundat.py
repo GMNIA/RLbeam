@@ -53,7 +53,7 @@ class RunDat:
             dat_text = self.generate_dat()
             with open(dat_temp_path, "w") as file:
                 file.write(dat_text)
-            subprocess.run([self.sps_path, dat_temp_path], cwd=self.temp_dir)
+            subprocess.run([self.sps_path, dat_temp_path], cwd=temp_dir)
 
             # Save file if string with file path is specified
             if dat_path_to_save:
