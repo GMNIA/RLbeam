@@ -24,24 +24,9 @@ class RunDat:
         dat_writer = DatWriter(self.y_values, self.z_values, h_values, b_values)
         return dat_writer.generate_text()
 
-    def _run_test(self):
-        # Use a temporary directory to save the .dat file
-        if os.path.exists(self.temp_dir):
-            shutil.rmtree(self.temp_dir)
-        os.makedirs(self.temp_dir, exist_ok=True)
-
-        file_path = os.path.join(self.temp_dir, 'linebridge.dat')
-
-        # Generate and write the .dat file content
-        dat_text = self.generate_dat()
-        with open(file_path, "w") as file:
-            file.write(dat_text)
-        print(f"File saved to temporary path: {file_path}")
-
+    def run_test(self, dat_file_path=''):
         # Run the SOFiSTiK SPS executable in the temporary directory
-        start = time.time()
-        subprocess.run([self.sps_path, file_path], cwd=self.temp_dir)
-        print('Total time:', time.time() - start)
+        subprocess.run([self.sps_path, dat_file_path], cwd=self.temp_dir)
 
 
     def run(self, dat_path_to_save=''):
